@@ -1,0 +1,41 @@
+/* Imports scss 
+@import 'colors';
+@import 'mixin';
+@import 'font';
+/*...*/
+body {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  max-width: 1200px; }
+
+/*     Headline      */
+.navbar {
+  width: 933px;
+  height: 28px;
+  padding-top: 20px; }
+  .navbar img {
+    padding-top: 20px; }
+  .navbar ul {
+    width: 480px;
+    height: 10px;
+    listy-style-type: none;
+    float: right; }
+  .navbar ul > li {
+    display: inline-block;
+    padding-right: 25px; }
+  .navbar a {
+    text-decoration: none;
+    color: black;
+    /*do zmiany na #FFF */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: linear-gradient(currentColor, currentColor) bottom/0 0.1em no-repeat;
+    transition: 1s; }
+  .navbar a:hover {
+    background-size: 100% .1em;
+    color: #fed233; }
+
+/*# sourceMappingURL=style.css.map */
