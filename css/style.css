@@ -257,4 +257,12 @@ body {
     margin: 25px auto;
     line-height: 25px; }
 
+/*        Partners       */
+.partners {
+  width: 100vw;
+  text-align: center;
+  margin: 3% auto; }
+  .partners img {
+    padding: 0 2%; }
+
 /*# sourceMappingURL=style.css.map */
