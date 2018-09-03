@@ -135,6 +135,49 @@ body {
     margin: 0 30px;
     line-height: 22px; }
 
-/* ================= Gird ==================== */
+/*                Portfolio            */
+.ability {
+  width: 100vw;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 5% 0;
+  line-height: 10px; }
+  .ability h1 {
+    font-family: Montserrat;
+    color: #222222;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .ability h6 {
+    font-family: DroidSerif;
+    color: #777777;
+    font-size: 16px;
+    font-style: italic; }
+  .ability .row1-portfolio, .ability .row2-portfolio {
+    display: flex;
+    justify-content: center; }
+  .ability .row-portfolio {
+    flex: 1;
+    background-color: #fff;
+    max-width: 290px;
+    margin: 20px;
+    text-transform: capitalize;
+    transition: all 0.5s ease; }
+  .ability h3 {
+    font-family: Montserrat;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700; }
+  .ability p {
+    font-family: DroidSerif;
+    color: #737373;
+    font-size: 14px;
+    font-style: italic; }
+
+.row1-portfolio > .row-portfolio:hover {
+  transform: rotate(-10deg); }
+
+.row2-portfolio > .row-portfolio:hover {
+  transform: rotate(10deg); }
 
 /*# sourceMappingURL=style.css.map */
