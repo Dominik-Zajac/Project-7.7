@@ -80,10 +80,61 @@ body {
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 700;
-    text-align: center; }
+    text-align: center;
+    text-transform: uppercase; }
   .welcome-button:hover {
     background-color: #fff;
     border: 3px #fed136 solid;
     color: #fed136; }
+
+/*        promotion      */
+.benefits {
+  width: 60%;
+  margin: 100px auto;
+  text-align: center; }
+  .benefits h1 {
+    font-family: Montserrat;
+    color: #222222;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px; }
+  .benefits h6 {
+    font-family: DroidSerif;
+    color: #777777;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 0; }
+  .benefits .service {
+    display: flex; }
+  .benefits .service-benefits {
+    flex: 1; }
+  .benefits .fas {
+    flex: 1;
+    font-size: 58px;
+    color: #fed136;
+    border: solid 3px #fed136;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 1s;
+    min-width: 68px; }
+    .benefits .fas:hover {
+      transform: scale(1.2);
+      box-shadow: 0 15px 10px rgba(254, 209, 54, 0.4); }
+  .benefits h3 {
+    font-family: Montserrat;
+    color: #222;
+    font-size: 18px;
+    font-weight: 700; }
+  .benefits p {
+    font-family: RobotoSlab;
+    color: #777777;
+    font-size: 14px;
+    /* Przybliżenie (wynika z podstawienia czcionki) */
+    font-weight: 400;
+    text-align: center;
+    margin: 0 30px;
+    line-height: 22px; }
+
+/* ================= Gird ==================== */
 
 /*# sourceMappingURL=style.css.map */
