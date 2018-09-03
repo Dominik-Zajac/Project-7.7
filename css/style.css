@@ -6,7 +6,6 @@
 /*...*/
 body {
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
   width: 100%; }
 
 /*     Headline      */
@@ -179,5 +178,83 @@ body {
 
 .row2-portfolio > .row-portfolio:hover {
   transform: rotate(10deg); }
+
+/*             Team                  */
+.team {
+  width: 100vw;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 5% 0;
+  line-height: 10px; }
+  .team h1 {
+    font-family: Montserrat;
+    color: #222222;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .team h6 {
+    font-family: DroidSerif;
+    color: #777777;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal; }
+  .team .gallery-team {
+    display: flex;
+    justify-content: center; }
+  .team .row-team {
+    flex: 1;
+    margin: 20px;
+    text-transform: capitalize;
+    max-width: 15vw; }
+  .team img {
+    border-radius: 50%;
+    border: solid 10px #fff;
+    min-width: 220px;
+    max-height: 210px; }
+  .team h3 {
+    font-family: Montserrat;
+    color: #222;
+    font-size: 16px;
+    /* Przybliżenie (wynika z podstawienia czcionki) */
+    font-weight: bolder; }
+  .team p {
+    font-family: RobotoSlab;
+    color: #777;
+    font-size: 14px;
+    /* Przybliżenie (wynika z podstawienia czcionki) */
+    font-weight: 400; }
+  .team .fab {
+    font-size: 21px;
+    color: #222;
+    border: solid 3px #222;
+    border-radius: 50%;
+    padding: 5px;
+    transition: 1s;
+    min-width: 25px;
+    min-height: 25px;
+    margin: 5px; }
+  .team .fab:hover {
+    transform: scale(1.2); }
+  .team .fa-google:hover {
+    border: solid 3px #d95232;
+    color: #d95232; }
+  .team .fa-twitter:hover {
+    border: solid 3px #00aced;
+    color: #00aced; }
+  .team .fa-facebook-f:hover {
+    border: solid 3px #3b5998;
+    color: #3b5998; }
+  .team .fa-pinterest-p:hover {
+    border: solid 3px #cb2028;
+    color: #cb2028; }
+  .team .text-team {
+    font-family: RobotoSlab;
+    color: #777777;
+    font-size: 16px;
+    /* Przybliżenie (wynika z podstawienia czcionki) */
+    font-weight: 400;
+    max-width: 40vw;
+    margin: 25px auto;
+    line-height: 25px; }
 
 /*# sourceMappingURL=style.css.map */

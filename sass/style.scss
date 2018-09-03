@@ -5,7 +5,6 @@
 /*...*/
 body {
 	margin: 0 auto;
-	font-family: 'Open Sans', sans-serif;
 	width: 100%;
 }
 
@@ -156,7 +155,6 @@ body {
 	text-align: center;
 	padding: 5% 0;
 	line-height: 10px;
-
 	h1{
 		font-family: Montserrat;
 		color: #222222;
@@ -200,4 +198,94 @@ body {
 }
 .row2-portfolio > .row-portfolio:hover{
 	transform: rotate(10deg);
+}
+
+/*             Team                  */
+.team {
+	width: 100vw;
+	background-color: #f4f4f4;
+	text-align: center;
+	padding: 5% 0;
+	line-height: 10px;
+	h1 {
+		font-family: Montserrat;
+		color: #222222;
+		font-size: 40px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	h6 {
+		font-family: DroidSerif;
+		color: #777777;
+		font-size: 16px;
+		font-style: italic;
+		font-weight: normal;
+	}
+	.gallery-team {
+		display: flex;
+		justify-content: center;
+	}
+	.row-team {
+		flex: 1;
+		margin: 20px;
+		text-transform: capitalize;
+		max-width: 15vw;
+	}
+	img {
+		border-radius: 50%;
+		border: solid 10px #fff;
+		min-width: 220px;
+		max-height: 210px;
+	}
+	h3{
+		font-family: Montserrat;
+		color: #222;
+		font-size: 16px;/* Przybliżenie (wynika z podstawienia czcionki) */
+		font-weight: bolder;
+	}
+	p{
+		font-family: RobotoSlab;
+		color: #777;
+		font-size: 14px;/* Przybliżenie (wynika z podstawienia czcionki) */
+		font-weight: 400;
+	}
+	.fab{	
+	 	font-size: 21px;
+		color: #222;
+		border: solid 3px #222;
+		border-radius: 50%;
+		padding: 5px;
+		transition: 1s;
+		min-width: 25px;
+		min-height: 25px;
+		margin: 5px;
+	}
+	.fab:hover{
+		transform: scale(1.2);
+	}
+	.fa-google:hover {
+		border: solid 3px #d95232;
+		color: #d95232; 
+	}
+	.fa-twitter:hover {
+		border: solid 3px #00aced;
+		color: #00aced; 
+	}
+	.fa-facebook-f:hover {
+		border: solid 3px #3b5998;
+		color: #3b5998; 
+	}
+	.fa-pinterest-p:hover {
+		border: solid 3px #cb2028;
+		color: #cb2028; 
+	}
+	.text-team{
+		font-family: RobotoSlab;
+		color: #777777;
+		font-size: 16px;/* Przybliżenie (wynika z podstawienia czcionki) */
+		font-weight: 400;
+		max-width: 40vw;
+		margin: 25px auto;
+		line-height: 25px;
+	}
 }
