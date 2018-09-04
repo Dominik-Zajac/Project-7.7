@@ -265,4 +265,68 @@ body {
   .partners img {
     padding: 0 2%; }
 
+/*         Contact       */
+.contact {
+  background-color: #1c1c1c;
+  text-align: center; }
+  .contact .map {
+    background-image: url("../image/Map-Image.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 65vh;
+    padding-top: 2%; }
+  .contact h1 {
+    font-family: Montserrat;
+    color: #fff;
+    font-size: 40px;
+    /* Przybliżenie (wynika z podstawienia czcionki) */
+    font-weight: 700;
+    margin-top: 2%; }
+  .contact h6 {
+    font-family: DroidSerif;
+    color: #777;
+    font-size: 16px;
+    /* Przybliżenie (wynika z podstawienia czcionki) */
+    font-style: italic;
+    font-weight: normal; }
+  .contact .send-message {
+    border-radius: 3px;
+    background-color: #fed136;
+    width: 240px;
+    height: 65px;
+    border: none;
+    top: 40vh;
+    color: #fff;
+    transition: 1s;
+    border: 3px #fff solid;
+    margin-top: 2%; }
+    .contact .send-message .text-button {
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase; }
+    .contact .send-message:hover {
+      background-color: #fff;
+      border: 3px #fed136 solid;
+      color: #fed136; }
+
+.contact-columns {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  position: relative;
+  margin: 0 auto; }
+  .contact-columns .columns {
+    margin: 15px;
+    padding: 15px;
+    text-transform: uppercase;
+    max-width: 45%;
+    border-radius: 3%; }
+
+.message-input {
+  position: absolute;
+  min-width: 40%;
+  right: 0; }
+
 /*# sourceMappingURL=style.css.map */
