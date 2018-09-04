@@ -329,4 +329,39 @@ body {
   min-width: 40%;
   right: 0; }
 
+/*                  Footer                 */
+.footer {
+  text-align: center;
+  margin: 1% auto; }
+  .footer p {
+    font-family: Montserrat;
+    color: #555;
+    font-size: 14px;
+    /* Przybliżenie (wynika z podstawienia czcionki) */
+    font-weight: 600;
+    display: inline-block;
+    margin-left: -25%;
+    margin-right: 10%; }
+  .footer .fab {
+    font-size: 25px;
+    color: #fff;
+    border-radius: 50%;
+    padding: 6px;
+    transition: 1s;
+    min-width: 25px;
+    min-height: 25px;
+    margin: 4px;
+    background-color: #222;
+    text-align: center; }
+  .footer .fab:hover {
+    transform: scale(1.3); }
+  .footer .fa-google:hover {
+    background-color: #d95232; }
+  .footer .fa-twitter:hover {
+    background-color: #00aced; }
+  .footer .fa-facebook-f:hover {
+    background-color: #3b5998; }
+  .footer .fa-pinterest-p:hover {
+    background-color: #cb2028; }
+
 /*# sourceMappingURL=style.css.map */
