@@ -1,147 +1,129 @@
-/* Imports scss 
-@import 'colors';
+/* Imports scss */
 @import 'mixin';
+@import 'colors';
 @import 'font';
-/*...*/
+
 body {
 	margin: 0 auto;
-	width: 100%;
+}
+
+/* Style of main headers */
+.heading {
+	@include text($Montserrat, 40px);
+    margin: 0;
+    text-transform: $uppercase;
+    letter-spacing: -1.1px;
+    line-height: 38px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.subheading {
+	@include text($DroidSerif, 16px);
+    margin: 13px 0 76px;
+    font-style: $Italic;
+    color: #777;
+    letter-spacing: -.18px;
+    text-align: center;
 }
 
 /*     Headline      */
 .navbar {
-	width: 100%;
-	height: 0px;
+	@include size(100%, 0px);
 	text-align: center;
-	img{
+	img {
 		margin-top: 4%;
 	}
-	ul{
-		width: 60%;
-		height: 10px;
-		listy-style-type: none;
+	ul {
+		@include size(60%, 10px);
 		float: right;
 		margin-top: 4%;
 	}
-	ul > li{
+	ul > li {
 		display: inline-block;
 		padding: 0 25px;
-	}a{
+	}
+	a {
+		@include text($Montserrat, 14px);
 		text-decoration: none;
-		color: #FFF; 
-		font-family: Montserrat;
-		font-size: 14px;
-		font-weight: 400;
-		text-transform: uppercase;
+		color: $white; 
+		text-transform: $uppercase;
 	    background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
 	    transition: 1s;
-	        }
-        a:hover{
-		background-size: 100% .1em;
-		color: #fed233;
-        }
-	}
+        &:hover{
+			background-size: 100% .1em;
+			color: $orange;
+		}
+    }
+}
+
 /*        Welcome Page      */
-.slogan {
+.welcome-page {
 	height: 100vh;
-	background-image: url('../image/Home.png');
+	background-image: url('../image/Slogan/Home.png');
 	background-size: cover;
 	position: static;
-}
-.slogan2 {
-	color: #fff;
-	text-align: center;
-	h2{
-		font-family: DroidSerif;
-		font-size: 40px;/* Przybliżenie (wynika z podstawienia czcionki) */
-		font-style: italic;
-		position: relative;
-		top: 40vh;
-		margin: 0 auto;
-		left: 30vw;
+	.slogan {
+		color: $white;
+		text-align: center;
+		max-width: 100%;
 	}
 	h1{
-		font-family: Montserrat;
-		font-size: 75px;/* Przybliżenie (wynika z podstawienia czcionki) */
-		font-weight: 700;
+		max-width: 40%;
+		@include text(DroidSerif, 40px);
+		font-style: $Italic;
+		position: relative;
+		top: 40vh;
+		left: 30vw;
+		margin: 0;
+		text-transform: capitalize;
+	}
+	h2{
+		@include text($Montserrat, 65px);
 		position: relative;
 		top: 37vh;
+		text-transform: $uppercase;
 	}
-}
-.welcome-button {
-	border-radius: 3px;
-	background-color: #fed136;
-	width: 240px;
-	height: 65px;
-	border: none;
-	position: relative;
-	top: 40vh;
-	color: #fff;
-	transition: 1s;
-	border: 3px #fff solid;
+	.welcome-button {
+		@include size(240px, 65px);
+		@include button(3px, $orange, 3px $white solid, 40vh, $white, 1s);
+		position: relative;
+		cursor: pointer;
+		&:hover {
+			background-color: $white;
+			border: 3px $orange solid;
+			color: $orange;
+		}
+	}
 	.text-button{
-		font-family: Montserrat;
-		font-size: 18px;
-		font-weight: 700;
+		@include text($Montserrat, 18px);
 		text-align: center;
-		text-transform: uppercase;
-	}
-	&:hover {
-			background-color: #fff;
-			border: 3px #fed136 solid;
-			color: #fed136;
+		text-transform: $uppercase;
 	}
 }
-/*        promotion      */
+
+/*        Promotion      */
 .benefits {
 	width: 60%;
 	margin: 100px auto;
 	text-align: center;
-	h1{
-		font-family: Montserrat;
-		color: #222222;
-		font-size: 40px;
-		font-weight: 700;
-		margin-bottom: 15px;
-	}
-	h6{
-		font-family: DroidSerif;
-		color: #777777;
-		font-size: 16px;
-		font-style: italic;
-		margin-top: 0;
-	}
-	.service{
+	.service {
 		display: flex;
 	}
-	.service-benefits{
+	.service-benefits {
 		flex: 1;
 	}
-	.fas{	
-		flex: 1;
-	 	font-size: 58px;
-		color: #fed136;
-		border: solid 3px #fed136;
-		border-radius: 50%;
-		padding: 10px;
-		transition: 1s;
-		min-width: 68px;
-		&:hover {
-			transform: scale(1.2);
-			box-shadow: 0 15px 10px rgba(254, 209, 54, 0.4);
-		}
+	.fas {
+		@include icon(58px, $orange, 50%, 10px, 1s, 68px);
+		border: solid 3px $orange;
 	}
 	h3 {
-		font-family: Montserrat;
-		color: #222;
-		font-size: 18px;
-		font-weight: 700;
+		@include text($Montserrat, 18px);
+		color: $black;
 	}
-	p{
-		font-family: RobotoSlab;
-		color: #777777;
-		font-size: 14px;/* Przybliżenie (wynika z podstawienia czcionki) */
-		font-weight: 400;
+	p {
+		@include text($RobotoSlab, 14px);
+		color: $gray;
 		text-align: center;
 		margin: 0 30px;
 		line-height: 22px;
@@ -149,55 +131,153 @@ body {
 }
 
 /*                Portfolio            */
-.ability{
+.ability {
 	width: 100vw;
 	background-color: #f4f4f4;
 	text-align: center;
 	padding: 5% 0;
 	line-height: 10px;
-	h1{
-		font-family: Montserrat;
-		color: #222222;
-		font-size: 40px;
-		font-weight: 700;
-		text-transform: uppercase;
-	}
-	h6{
-		font-family: DroidSerif;
-		color: #777777;
-		font-size: 16px;
-		font-style: italic;
-	}
-	.row1-portfolio, .row2-portfolio{
+	.row1-portfolio, .row2-portfolio {
 		display: flex;
 		justify-content: center;
 	}
-	.row-portfolio{
+	.row-portfolio {
 		flex: 1;
-		background-color: #fff;
+		background-color: $white;
 		max-width: 290px;
 		margin: 20px;
 		text-transform: capitalize;
 		transition: all 0.5s ease;
 	}
 	h3 {
-		font-family: Montserrat;
+		@include text($Montserrat, 18px);
 		color: #333;
-		font-size: 18px;
-		font-weight: 700;
 	}
-	p{
-		font-family: DroidSerif;
+	p {
+		@include text($DroidSerif, 14px);
 		color: #737373;
-		font-size: 14px;
-		font-style: italic;
+		font-style: $Italic;
 	}
 }
-.row1-portfolio > .row-portfolio:hover{
-	transform: rotate(-10deg);
+
+.portfolio-hover {
+	cursor: pointer;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	transition: all ease 0.5s;
+	opacity: 0;
+	width: 290px;
+	height: 301px;
+	background: fade-out($orange, .1);
+	.fa {
+		font-size: 70px;
+		border-radius: 5px;
+		color: $white;
+		margin: 40% auto;
+	}
 }
-.row2-portfolio > .row-portfolio:hover{
-	transform: rotate(10deg);
+
+.row-portfolio:hover > .portfolio-hover {
+	opacity: 1;
+	width: 290px;
+	height: 301px;
+}
+
+/*             About                 */
+.about {
+	width: 940px;
+    margin: 5% auto;
+}
+.about-item {
+    position: relative;
+    margin-bottom: 91px;
+    &:after{
+    	@include size(2px, 98px);
+	    position: absolute;
+	    bottom: -92px;
+	    left: 50%;
+	    display: block;
+	    content: '';
+	    background-color: $light-grey;
+	}
+}
+
+.about-text {
+    display: inline-block;
+    width: 340px;
+    text-align: right;
+    vertical-align: top;
+    p {
+    	@include text($RobotoSlab, 14px);
+	    width: 295px;
+	    float: right;
+	    margin: 0 1px;
+	    line-height: 22px;
+	    color: $gray;
+	}
+}
+
+.vertical-line {
+	@include size(182px, 182px);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 33px 0 35px;
+    box-sizing: border-box;
+    vertical-align: top;
+    border: 7px solid $light-grey;
+    border-radius: 50%;
+}
+
+.line-text {
+	@include text($Montserrat, 18px);
+    margin-top: 0;
+    margin-bottom: 11px;
+    line-height: 22px;
+    color: $black;
+    text-align: right;
+    span {
+	    display: block;
+	    text-transform: $uppercase;
+	}
+}
+
+.item-right {
+    padding-left: 344px;   
+	h3 {
+    	text-align: left;
+    }
+    p {
+		float: left;
+    }
+    .about-text {
+    	margin-top: 1px;
+    	text-align: left;
+    }
+}
+
+.item-single {
+    margin-bottom: 4px;
+	&:after {
+    	display: none;
+    }
+	.circle-item {
+		@include text($Montserrat, 18px);
+	    display: block;
+	    box-sizing: border-box;
+	    @include size(182px, 182px);
+	    margin: 0 auto;
+	    padding: 33px 31px 0;
+	    border: 7px solid $light-grey;
+	    border-radius: 50%;
+	    background: $orange;
+	    line-height: 27px;
+	    text-align: center;
+	    text-transform: uppercase;
+	    text-decoration: none;
+	    color: $white;
+	}
 }
 
 /*             Team                  */
@@ -207,20 +287,6 @@ body {
 	text-align: center;
 	padding: 5% 0;
 	line-height: 10px;
-	h1 {
-		font-family: Montserrat;
-		color: #222222;
-		font-size: 40px;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-	h6 {
-		font-family: DroidSerif;
-		color: #777777;
-		font-size: 16px;
-		font-style: italic;
-		font-weight: normal;
-	}
 	.gallery-team {
 		display: flex;
 		justify-content: center;
@@ -233,57 +299,43 @@ body {
 	}
 	img {
 		border-radius: 50%;
-		border: solid 10px #fff;
+		border: solid 10px $white;
 		min-width: 220px;
 		max-height: 210px;
 	}
-	h3{
-		font-family: Montserrat;
-		color: #222;
-		font-size: 16px;/* Przybliżenie (wynika z podstawienia czcionki) */
-		font-weight: bolder;
+	h3 {
+		@include text($Montserrat, 16px);
+		color: $black;
 	}
-	p{
-		font-family: RobotoSlab;
-		color: #777;
-		font-size: 14px;/* Przybliżenie (wynika z podstawienia czcionki) */
-		font-weight: 400;
+	p {
+		@include text($RobotoSlab, 14px);
+		color: $gray;
 	}
-	.fab{	
-	 	font-size: 21px;
-		color: #222;
-		border: solid 3px #222;
-		border-radius: 50%;
-		padding: 5px;
-		transition: 1s;
-		min-width: 25px;
+	.fab {
+		@include icon(21px, $black, 50%, 5px, 1s, 25px);
+		border: solid 3px $black;
 		min-height: 25px;
 		margin: 5px;
-	}
-	.fab:hover{
-		transform: scale(1.2);
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.2);
+		}
 	}
 	.fa-google:hover {
-		border: solid 3px #d95232;
-		color: #d95232; 
+		@include fa-icon(solid 3px #d95232, #d95232);
 	}
 	.fa-twitter:hover {
-		border: solid 3px #00aced;
-		color: #00aced; 
+		@include fa-icon(solid 3px #00aced, #00aced); 
 	}
 	.fa-facebook-f:hover {
-		border: solid 3px #3b5998;
-		color: #3b5998; 
+		@include fa-icon(solid 3px #3b5998, #3b5998);
 	}
 	.fa-pinterest-p:hover {
-		border: solid 3px #cb2028;
-		color: #cb2028; 
+		@include fa-icon(solid 3px #cb2028, #cb2028);
 	}
-	.text-team{
-		font-family: RobotoSlab;
-		color: #777777;
-		font-size: 16px;/* Przybliżenie (wynika z podstawienia czcionki) */
-		font-weight: 400;
+	.text-team {
+		@include text($RobotoSlab, 16px);
+		color: $gray;
 		max-width: 40vw;
 		margin: 25px auto;
 		line-height: 25px;
@@ -295,7 +347,7 @@ body {
 	width: 100vw;
 	text-align: center;
 	margin: 3% auto;
-	img{
+	img {
 		padding: 0 2%;
 	}
 }
@@ -304,51 +356,39 @@ body {
 .contact {
 	background-color: #1c1c1c;
 	text-align: center;
-	.map{
-		background-image: url('../image/Map-Image.png');
+	.map {
+		background-image: url('../image/Map/Map-Image.png');
 		background-repeat: no-repeat;
 		background-position: right;
 		height: 65vh;
 		padding-top: 2%;
 	}
-	h1{
-		font-family: Montserrat;
-	color:#fff;
-	font-size: 40px;/* Przybliżenie (wynika z podstawienia czcionki) */
-	font-weight: 700;
-	margin-top: 2%;
+	h1 {
+		@include text($Montserrat, 40px);
+		color:#fff;
+		margin-top: 2%;
 	}
 	h6 {
-		font-family: DroidSerif;
-		color: #777;
-		font-size: 16px;/* Przybliżenie (wynika z podstawienia czcionki) */
-		font-style: italic;
-		font-weight: normal;
+		@include text($DroidSerif, 16px);
+		color: $gray;
+		font-style: $Italic;
 	}
 	.send-message {
-	border-radius: 3px;
-	background-color: #fed136;
-	width: 240px;
-	height: 65px;
-	border: none;
-	top: 40vh;
-	color: #fff;
-	transition: 1s;
-	border: 3px #fff solid;
-	margin-top: 2%;
-	.text-button{
-		font-family: Montserrat;
-		font-size: 18px;
-		font-weight: 700;
+		@include size(240px, 65px);
+		@include button(3px, $orange, 3px $white solid, 40vh, $white, 1s);
+		margin-top: 2%;
+		cursor: pointer;
+		&:hover {
+			background-color: $white;
+			border: 3px $orange solid;
+			color: $orange;
+		}
+	}
+	.text-button {
+		@include text($Montserrat, 18px);
 		text-align: center;
-		text-transform: uppercase;
+		text-transform: $uppercase; 
 	}
-	&:hover {
-			background-color: #fff;
-			border: 3px #fed136 solid;
-			color: #fed136;
-	}
-}
 }
 .contact-columns {
 	display: flex;
@@ -359,7 +399,7 @@ body {
 	.columns {
 		 margin: 15px;
 		 padding: 15px;
-		 text-transform: uppercase;
+		 text-transform: $uppercase;
 		 max-width: 45%;
 		 border-radius: 3%;
 	}
@@ -374,31 +414,24 @@ body {
 .footer {
 	text-align: center;
 	margin: 1% auto;
-
-	p{
-		font-family: Montserrat;
+	p {
+		@include text($Montserrat, 14px);
 		color:#555;
-		font-size: 14px;/* Przybliżenie (wynika z podstawienia czcionki) */
-		font-weight: 600;
 		display: inline-block;
 		margin-left: -25%;
 		margin-right: 10%;
 	}
-	.fab{
-		font-size: 25px;
-		color: #fff;
-		border-radius: 50%;
-		padding: 6px;
-		transition: 1s;
-		min-width: 25px;
+	.fab {
+		@include icon(25px, $white, 50%, 6px, 1s, 25px);
 		min-height: 25px;
 		margin: 4px;
-		background-color: #222;
+		background-color: $black;
 		text-align: center;
-	}
-	.fab:hover{
-		transform: scale(1.3);
-	}
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.3);
+		}
+	}	
 	.fa-google:hover {
 		background-color: #d95232; 
 	}
@@ -412,3 +445,147 @@ body {
 		background-color: #cb2028; 
 	}
 }
+
+/* ================== Media ==================== */
+@media (max-width: 991px) {
+
+	/*Headline*/	
+	.navbar {
+		ul {
+			@include size(100%, 10px);
+			margin-top: 0;
+		}
+		ul > li {
+			display: block;
+			padding: 15px 0;
+		}
+		a {
+			font-size: 14px;
+			letter-spacing: 3px;
+    	}
+	}
+
+	/*Welcome Page*/
+	.welcome-page {
+		h1{
+			max-width: 100%;
+			left: 0;
+		}
+	}	
+
+	/*Promotion*/
+	.benefits {
+		display: inline;
+	}
+
+	.service {
+		text-align: center;
+	}
+
+	/*                Portfolio            */
+	.ability {
+		margin: 20px auto;
+		.row1-portfolio, .row2-portfolio {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.row-portfolio {
+			min-width: 290px;
+			margin: 40px auto;
+			line-height: 15px;
+			padding-bottom: 10px;
+		}
+	}
+	/*         About     */
+	.about-text {
+		float: left;
+	    text-align: left;
+	}
+	
+	.vertical-line {
+	    margin: 0 34px 0 40px;
+	}
+	
+	.item-right {
+	    padding-left: 0px;   
+		h3 {
+	    	text-align: left;
+	    	padding-left: 50px
+	    }
+	    p {
+			float: left;
+			padding-left: 50px
+	    }
+	    .about-text {
+	    	text-align: left;
+
+	    }
+	}
+
+	.line-text {
+		padding-left: 48px;
+    	text-align: left;
+	}
+
+	/*             Team                  */
+	.team {
+		h1 {
+			font-size: 30px;
+		}
+		.gallery-team {
+			display: block;
+		}
+		.row-team {
+			margin: 0 auto;
+			min-width: 100%;
+		}
+		.fab {
+			min-height: 25px;
+			margin: 5px;
+		}
+		.text-team {
+			max-width: 80vw;
+		}
+	}
+
+	/*        Partners       */
+	.partners {
+		margin: 1% auto;
+		img {
+			padding: 2% 2%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	/*         Contact       */
+	.contact {
+		.map {
+			height: 90vh;
+		}
+		.contact-columns {
+			max-width: 70%;
+		}
+		.columns {
+			 margin: 10px auto;
+			 min-width: 70%;
+		}
+	}
+
+	.message-input {
+		position: static;
+	}
+
+	/*                  Footer                 */
+	.footer {
+		p {
+			display: block;
+			margin: 0 auto;
+			padding: 15px 0;
+		}
+		.fab {
+			margin: 10px;
+		}	
+	}
+}
+

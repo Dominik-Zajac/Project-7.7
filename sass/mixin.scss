@@ -1,0 +1,32 @@
+@mixin text($font-family, $font-size) {
+	font-family: $font-family;
+	font-size: $font-size;
+}
+
+@mixin size($width, $height){
+	width: $width;
+	height: $height;
+}
+
+@mixin button($border-radius, $background-color, $border, $top, $color, $transition){
+	border-radius: $border-radius;
+	background-color: $background-color;
+	border: $border;
+	top: $top;
+	color: $color;
+	transition: $transition;
+}
+
+@mixin icon($font-size, $color, $border-radius, $padding, $transition, $min-width){
+	font-size: $font-size;
+	color: $color;
+	border-radius: $border-radius;
+	padding: $padding;
+	transition: $transition;
+	min-width: $min-width;
+}
+
+@mixin fa-icon($border, $color){
+	border: $border;
+	color: $color;
+}
