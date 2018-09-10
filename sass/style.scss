@@ -113,7 +113,7 @@ body {
 	.service-benefits {
 		flex: 1;
 	}
-	.fas {
+	.fa-icon {
 		@include icon(58px, $orange, 50%, 10px, 1s, 68px);
 		border: solid 3px $orange;
 	}
@@ -137,7 +137,7 @@ body {
 	text-align: center;
 	padding: 5% 0;
 	line-height: 10px;
-	.row1-portfolio, .row2-portfolio {
+	.portfolio-wrapper {
 		display: flex;
 		justify-content: center;
 	}
@@ -311,7 +311,7 @@ body {
 		@include text($RobotoSlab, 14px);
 		color: $gray;
 	}
-	.fab {
+	.fa-icon {
 		@include icon(21px, $black, 50%, 5px, 1s, 25px);
 		border: solid 3px $black;
 		min-height: 25px;
@@ -421,7 +421,7 @@ body {
 		margin-left: -25%;
 		margin-right: 10%;
 	}
-	.fab {
+	.fa-icon {
 		@include icon(25px, $white, 50%, 6px, 1s, 25px);
 		min-height: 25px;
 		margin: 4px;
@@ -485,7 +485,7 @@ body {
 	/*                Portfolio            */
 	.ability {
 		margin: 20px auto;
-		.row1-portfolio, .row2-portfolio {
+		.portfolio-wrapper {
 			display: flex;
 			flex-wrap: wrap;
 		}
@@ -539,7 +539,7 @@ body {
 			margin: 0 auto;
 			min-width: 100%;
 		}
-		.fab {
+		.fa-icon {
 			min-height: 25px;
 			margin: 5px;
 		}
@@ -583,7 +583,7 @@ body {
 			margin: 0 auto;
 			padding: 15px 0;
 		}
-		.fab {
+		.fa-icon {
 			margin: 10px;
 		}	
 	}
